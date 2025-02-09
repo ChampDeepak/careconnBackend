@@ -14,6 +14,7 @@ app.use(cors({
 }));
 
 // Google Calendar credentials
+const calendar = google.calendar({ version: "v3" });
 const credentials = JSON.parse(process.env.GOOGLE_CREDS);
 const auth = new google.auth.GoogleAuth({
     credentials,
