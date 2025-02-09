@@ -32,6 +32,9 @@ function isSlotAvailable(slot, busySlots) {
   });
 }
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Server is running' });
+});
 // Get available slots
 app.get("/slots", async (req, res) => {
   try {
