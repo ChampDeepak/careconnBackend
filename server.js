@@ -8,7 +8,7 @@ app.use(express.json());
 //CORS Handling 
 const cors = require('cors');
 app.use(cors({
-    origin: ['https://champdeepak.github.io/careconnect/', 'http://localhost:3000'],
+    origin: ['https://champdeepak.github.io', 'http://localhost:3000'],
     methods: ['GET', 'POST'],
     credentials: true
 }));
