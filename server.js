@@ -13,11 +13,11 @@ app.use(cors({
     credentials: true
 }));
 
-// Configure Google Calendar
-const calendar = google.calendar({ version: "v3" });
+// Google Calendar credentials
+const credentials = JSON.parse(process.env.GOOGLE_CREDS);
 const auth = new google.auth.GoogleAuth({
-  keyFile: process.env.GOOGLE_CREDS,
-  scopes: ["https://www.googleapis.com/auth/calendar"],
+    credentials,
+    scopes: ['https://www.googleapis.com/auth/calendar']
 });
 
 // Utility function to check if a slot overlaps with busy times
